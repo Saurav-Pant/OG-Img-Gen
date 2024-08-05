@@ -7,7 +7,7 @@ interface BlogPostPageProps {
 }
 
 const siteMetadata = {
-  siteUrl: "http://localhost:3000",
+  siteUrl: "https://og-img-gen-flame.vercel.app",
 };
 
 export async function generateMetadata({
