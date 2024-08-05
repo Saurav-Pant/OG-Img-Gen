@@ -13,17 +13,37 @@ export async function GET(request: NextRequest) {
 
         return new ImageResponse(
             (
-                <div className="h-full w-full flex flex-col items-center justify-center bg-white">
-                    <div className="flex flex-col items-center justify-center bg-gray-200 p-10 rounded-lg">
+                <div
+                    style={{
+                        height: '100%',
+                        width: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        backgroundColor: 'white',
+                    }}
+                >
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            backgroundColor: '#f3f4f6',
+                            padding: '40px',
+                            borderRadius: '10px',
+                        }}
+                    >
                         {imageUrl && (
                             <img
                                 src={imageUrl}
                                 alt="Post image"
-                                className="w-75 h-50 object-cover mb-5 rounded"
+                                style={{ width: '300px', height: '200px', objectFit: 'cover', marginBottom: '20px', borderRadius: '5px' }}
                             />
                         )}
-                        <h1 className="text-6xl font-bold text-gray-800 mb-5 text-center">{title}</h1>
-                        <p className="text-3xl text-gray-600 text-center">{description}</p>
+                        <h1 style={{ fontSize: '60px', fontWeight: 'bold', color: '#1F2937', marginBottom: '20px', textAlign: 'center' }}>{title}</h1>
+                        <p style={{ fontSize: '30px', color: '#4B5563', textAlign: 'center' }}>{description}</p>
                     </div>
                 </div>
             ),
